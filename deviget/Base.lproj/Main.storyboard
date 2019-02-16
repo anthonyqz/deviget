@@ -99,7 +99,7 @@
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="author" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8RS-QB-u7b">
-                                            <rect key="frame" x="33" y="11" width="300" height="19.5"/>
+                                            <rect key="frame" x="33" y="11" width="40.5" height="19.5"/>
                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -113,7 +113,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title post" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9m4-7f-ECy">
-                                            <rect key="frame" x="78" y="35" width="255" height="60"/>
+                                            <rect key="frame" x="78" y="35" width="263" height="60"/>
                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -127,36 +127,44 @@
                                             <state key="normal" title="Dismiss Post"/>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3959 comments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYE-Wp-uIo">
-                                            <rect key="frame" x="240" y="109.5" width="93" height="18"/>
+                                            <rect key="frame" x="248" y="109.5" width="93" height="18"/>
                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 hours ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFc-9b-Xd3">
+                                            <rect key="frame" x="90" y="12" width="76.5" height="18"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="13"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="9m4-7f-ECy" firstAttribute="trailing" secondItem="8RS-QB-u7b" secondAttribute="trailing" id="3sf-9U-4c4"/>
                                         <constraint firstItem="8RS-QB-u7b" firstAttribute="leading" secondItem="W41-rD-iNY" secondAttribute="trailing" constant="8" id="51a-DI-Tyo"/>
                                         <constraint firstItem="9m4-7f-ECy" firstAttribute="top" secondItem="8RS-QB-u7b" secondAttribute="bottom" constant="4.5" id="Ari-XC-Eim"/>
+                                        <constraint firstItem="zFc-9b-Xd3" firstAttribute="leading" secondItem="8RS-QB-u7b" secondAttribute="trailing" constant="16.5" id="Bl8-6U-v26"/>
                                         <constraint firstItem="9m4-7f-ECy" firstAttribute="leading" secondItem="EDD-9O-0sR" secondAttribute="trailing" constant="8" id="Hag-hY-ayU"/>
                                         <constraint firstItem="EDD-9O-0sR" firstAttribute="leading" secondItem="W41-rD-iNY" secondAttribute="leading" id="Hjn-I0-sxL"/>
                                         <constraint firstAttribute="bottom" secondItem="VpL-xL-PNM" secondAttribute="bottom" constant="5.5" id="LTm-YR-FVT"/>
                                         <constraint firstItem="AYE-Wp-uIo" firstAttribute="centerY" secondItem="VpL-xL-PNM" secondAttribute="centerY" id="MQV-6B-Ofi"/>
                                         <constraint firstItem="8RS-QB-u7b" firstAttribute="height" relation="greaterThanOrEqual" secondItem="W41-rD-iNY" secondAttribute="height" id="SbF-Zs-8rd"/>
                                         <constraint firstItem="8RS-QB-u7b" firstAttribute="top" secondItem="37f-cq-3Eg" secondAttribute="topMargin" id="WvD-Vg-oSR"/>
+                                        <constraint firstAttribute="trailing" secondItem="9m4-7f-ECy" secondAttribute="trailing" id="Ygr-bE-pvf"/>
                                         <constraint firstItem="AYE-Wp-uIo" firstAttribute="trailing" secondItem="9m4-7f-ECy" secondAttribute="trailing" id="Yi9-MD-mZA"/>
                                         <constraint firstItem="EDD-9O-0sR" firstAttribute="top" secondItem="8RS-QB-u7b" secondAttribute="bottom" constant="4.5" id="ZjV-Vd-jLn"/>
                                         <constraint firstItem="VpL-xL-PNM" firstAttribute="leading" secondItem="EDD-9O-0sR" secondAttribute="leading" id="bAW-KC-abN"/>
                                         <constraint firstItem="W41-rD-iNY" firstAttribute="leading" secondItem="37f-cq-3Eg" secondAttribute="leading" constant="10" id="gaz-XN-3iz"/>
                                         <constraint firstItem="9m4-7f-ECy" firstAttribute="height" relation="greaterThanOrEqual" secondItem="EDD-9O-0sR" secondAttribute="height" id="hiU-JI-biH"/>
                                         <constraint firstItem="W41-rD-iNY" firstAttribute="top" secondItem="37f-cq-3Eg" secondAttribute="top" constant="10" id="n9h-Gc-tKB"/>
-                                        <constraint firstItem="8RS-QB-u7b" firstAttribute="trailing" secondItem="37f-cq-3Eg" secondAttribute="trailingMargin" id="paI-xi-7hW"/>
                                         <constraint firstItem="VpL-xL-PNM" firstAttribute="top" secondItem="9m4-7f-ECy" secondAttribute="bottom" constant="8" id="sUq-dC-fxK"/>
+                                        <constraint firstItem="zFc-9b-Xd3" firstAttribute="centerY" secondItem="8RS-QB-u7b" secondAttribute="centerY" id="x3g-Nr-aYX"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="authorLabel" destination="8RS-QB-u7b" id="xR2-JN-3rj"/>
                                     <outlet property="commentsLabel" destination="AYE-Wp-uIo" id="JtT-P9-ZAO"/>
+                                    <outlet property="hoursLabel" destination="zFc-9b-Xd3" id="cPM-KP-7vC"/>
                                     <outlet property="imagePost" destination="EDD-9O-0sR" id="oeG-HK-cRE"/>
                                     <outlet property="readView" destination="W41-rD-iNY" id="mZ0-Fy-hdh"/>
                                     <outlet property="titlePost" destination="9m4-7f-ECy" id="BSN-Q9-Ryb"/>

@@ -20,16 +20,17 @@ class PostCell: UITableViewCell {
     @IBOutlet private weak var imagePost: UIImageView!
     @IBOutlet private weak var titlePost: UILabel!
     @IBOutlet private weak var commentsLabel: UILabel!
+    @IBOutlet private weak var hoursLabel: UILabel!
     
     //MARK:- internal func
     func configureCell(post:EntryReddit) {
         configureReadView(post.read)
         configureImage(url: post.thumbnail, name: post.id)
+        configureHoursLabel(post.created_utc)
         
-        titlePost.text = post.title
         authorLabel.text = post.author_fullname
-        let comments = "\(post.num_comments) comments"
-        commentsLabel.text = comments
+        titlePost.text = post.title
+        commentsLabel.text = "\(post.num_comments) comments"
     }
 
     //MARK:- private func
@@ -53,5 +54,12 @@ class PostCell: UITableViewCell {
             , completion: { [weak self] (image) in
                 self?.imagePost.image = image
         })
+    }
+    
+    private func configureHoursLabel(_ time:TimeInterval) {
+        let dateCreated = Date(timeIntervalSince1970: time)
+        let components = Calendar.current.dateComponents([.hour], from: dateCreated, to: Date())
+        let text = "\(components.hour ?? 0) hours ago"
+        hoursLabel.text = text
     }
 }
