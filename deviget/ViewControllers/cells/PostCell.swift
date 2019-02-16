@@ -28,6 +28,8 @@ class PostCell: UITableViewCell {
         
         titlePost.text = post.title
         authorLabel.text = post.author_fullname
+        let comments = "\(post.num_comments) comments"
+        commentsLabel.text = comments
     }
 
     //MARK:- private func
