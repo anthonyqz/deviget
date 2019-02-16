@@ -9,6 +9,10 @@
 import UIKit
 import devigetModule
 
+protocol PostCellDelegate:class {
+    func dismissPost(with id:String?)
+}
+
 class PostCell: UITableViewCell {
 
     //MARK:- static properties
@@ -22,10 +26,16 @@ class PostCell: UITableViewCell {
     @IBOutlet private weak var commentsLabel: UILabel!
     @IBOutlet private weak var hoursLabel: UILabel!
     
+    //MARK:- private properties
+    private weak var delegate:PostCellDelegate?
+    private var idPost:String?
+    
     //MARK:- internal func
-    func configureCell(post:EntryReddit) {
+    func configureCell(post:EntryReddit, delegate:PostCellDelegate?) {
+        self.delegate = delegate
+        idPost = post.id
         configureReadView(post.read)
-        configureImage(url: post.thumbnail, name: post.id)
+        configureImage(url: post.thumbnail, name: idPost)
         configureHoursLabel(post.created_utc)
         
         authorLabel.text = post.author_fullname
@@ -33,6 +43,10 @@ class PostCell: UITableViewCell {
         commentsLabel.text = "\(post.num_comments) comments"
     }
 
+    @IBAction func dismissPost(_ sender: Any) {
+        delegate?.dismissPost(with: idPost)
+    }
+    
     //MARK:- private func
     private func configureReadView(_ read:Bool?) {
         let read = read ?? false
@@ -48,6 +62,8 @@ class PostCell: UITableViewCell {
     private func configureImage(url:String?, name:String?) {
         imagePost.layer.cornerRadius = imagePost.bounds.width / 2
         imagePost.layer.masksToBounds = true
+        imagePost.layer.borderWidth = 0.5
+        imagePost.layer.borderColor = UIColor.black.cgColor
         imagePost.image = nil
         DataManager.shared.downloadImage(from: url
             , name: name

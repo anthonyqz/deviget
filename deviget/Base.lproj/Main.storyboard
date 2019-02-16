@@ -125,6 +125,9 @@
                                             </constraints>
                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
                                             <state key="normal" title="Dismiss Post"/>
+                                            <connections>
+                                                <action selector="dismissPost:" destination="WCw-Qf-5nD" eventType="touchUpInside" id="Z3H-BF-qQI"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3959 comments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYE-Wp-uIo">
                                             <rect key="frame" x="248" y="109.5" width="93" height="18"/>

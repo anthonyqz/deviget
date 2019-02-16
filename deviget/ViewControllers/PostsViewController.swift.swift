@@ -74,7 +74,7 @@ extension PostsViewController {
         
         let post = posts[row]
         let cell = tableView.dequeueReusableCell(withIdentifier: PostCell.identifierView, for: indexPath) as! PostCell
-        cell.configureCell(post: post)
+        cell.configureCell(post: post, delegate: self)
         return cell
     }
     
@@ -90,6 +90,22 @@ extension PostsViewController {
             loadPosts(with: afterPostString)
         }
     }
+}
+
+// MARK: - PostCellDelegate
+extension PostsViewController:PostCellDelegate {
+    
+    func dismissPost(with id: String?) {
+        //get indexPath
+        if let row = posts.firstIndex(where: { $0.id == id }) {
+            posts.remove(at: row)
+            let indexPath = IndexPath(row: row, section: sectionPosts)
+            tableView.beginUpdates()
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            tableView.endUpdates()
+        }
+    }
+    
 }
 
 // MARK: - PostsViewDelegate
