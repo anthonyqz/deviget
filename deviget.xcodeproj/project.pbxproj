@@ -22,6 +22,9 @@
 		479D353C22184CC700B0017B /* DataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D353B22184CC700B0017B /* DataResponse.swift */; };
 		479D353E22184E9B00B0017B /* ChildrenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D353D22184E9B00B0017B /* ChildrenResponse.swift */; };
 		479D354022184F3600B0017B /* EntryReddit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D353F22184F3600B0017B /* EntryReddit.swift */; };
+		479D3543221855BC00B0017B /* PostsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D3542221855BC00B0017B /* PostsRepository.swift */; };
+		479D3545221855C800B0017B /* PostsRepositoryRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D3544221855C800B0017B /* PostsRepositoryRemote.swift */; };
+		479D3548221859C200B0017B /* PostsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D3547221859C200B0017B /* PostsPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,9 @@
 		479D353B22184CC700B0017B /* DataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResponse.swift; sourceTree = "<group>"; };
 		479D353D22184E9B00B0017B /* ChildrenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenResponse.swift; sourceTree = "<group>"; };
 		479D353F22184F3600B0017B /* EntryReddit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryReddit.swift; sourceTree = "<group>"; };
+		479D3542221855BC00B0017B /* PostsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRepository.swift; sourceTree = "<group>"; };
+		479D3544221855C800B0017B /* PostsRepositoryRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRepositoryRemote.swift; sourceTree = "<group>"; };
+		479D3547221859C200B0017B /* PostsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,8 @@
 				479D352A2218381300B0017B /* Info.plist */,
 				479D35342218383800B0017B /* DevigetProtocols.swift */,
 				479D35362218383E00B0017B /* models */,
+				479D35412218558C00B0017B /* repositories */,
+				479D35462218594300B0017B /* presenter */,
 			);
 			path = devigetModule;
 			sourceTree = "<group>";
@@ -140,6 +148,23 @@
 				479D353F22184F3600B0017B /* EntryReddit.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		479D35412218558C00B0017B /* repositories */ = {
+			isa = PBXGroup;
+			children = (
+				479D3542221855BC00B0017B /* PostsRepository.swift */,
+				479D3544221855C800B0017B /* PostsRepositoryRemote.swift */,
+			);
+			path = repositories;
+			sourceTree = "<group>";
+		};
+		479D35462218594300B0017B /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				479D3547221859C200B0017B /* PostsPresenter.swift */,
+			);
+			path = presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,9 +292,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				479D3548221859C200B0017B /* PostsPresenter.swift in Sources */,
 				479D353A22184CA000B0017B /* RedditResponse.swift in Sources */,
 				479D353E22184E9B00B0017B /* ChildrenResponse.swift in Sources */,
 				479D353C22184CC700B0017B /* DataResponse.swift in Sources */,
+				479D3543221855BC00B0017B /* PostsRepository.swift in Sources */,
+				479D3545221855C800B0017B /* PostsRepositoryRemote.swift in Sources */,
 				479D354022184F3600B0017B /* EntryReddit.swift in Sources */,
 				479D35352218383800B0017B /* DevigetProtocols.swift in Sources */,
 			);
