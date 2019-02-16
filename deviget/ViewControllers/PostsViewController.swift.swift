@@ -31,16 +31,20 @@ class PostsViewController: UITableViewController {
     // MARK: - Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     }
+    
+}
 
-    // MARK: - Table View
+//MARK:- Table View
+extension PostsViewController {
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return section == sectionLoadMore ? 1 : posts.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let section = indexPath.section
         let row = indexPath.row
@@ -57,7 +61,7 @@ class PostsViewController: UITableViewController {
         cell.textLabel?.text = post.title
         return cell
     }
-
+    
     override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         guard !isLoadingPosts else { return }
         //validate if is the last row
@@ -72,8 +76,8 @@ class PostsViewController: UITableViewController {
             presenter?.loadPosts()
         }
     }
-    
 }
+
 // MARK: - PostsViewDelegate
 extension PostsViewController:PostsViewDelegate {
     
