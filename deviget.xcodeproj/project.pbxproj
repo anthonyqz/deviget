@@ -13,6 +13,7 @@
 		479D34F62218321E00B0017B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 479D34F42218321E00B0017B /* Main.storyboard */; };
 		479D34F82218322100B0017B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 479D34F72218322100B0017B /* Assets.xcassets */; };
 		479D34FB2218322100B0017B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 479D34F92218322100B0017B /* LaunchScreen.storyboard */; };
+		B7A42FBD2AF5496FB02DA8DB /* Pods_deviget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59EB801C6CE11045DBE49A6 /* Pods_deviget.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		479D34F72218322100B0017B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		479D34FA2218322100B0017B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		479D34FC2218322100B0017B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89E9B8EA3853BF4428CB9DF2 /* Pods-deviget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-deviget.release.xcconfig"; path = "Pods/Target Support Files/Pods-deviget/Pods-deviget.release.xcconfig"; sourceTree = "<group>"; };
+		E06C62ACFB9FF3E16DD40291 /* Pods-deviget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-deviget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-deviget/Pods-deviget.debug.xcconfig"; sourceTree = "<group>"; };
+		E59EB801C6CE11045DBE49A6 /* Pods_deviget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_deviget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7A42FBD2AF5496FB02DA8DB /* Pods_deviget.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17A570EA11AEB21ABA436F32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E59EB801C6CE11045DBE49A6 /* Pods_deviget.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		479D34E22218321E00B0017B = {
 			isa = PBXGroup;
 			children = (
 				479D34ED2218321E00B0017B /* deviget */,
 				479D34EC2218321E00B0017B /* Products */,
+				B7F7749614B6C680982CF06D /* Pods */,
+				17A570EA11AEB21ABA436F32 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,15 @@
 			path = deviget;
 			sourceTree = "<group>";
 		};
+		B7F7749614B6C680982CF06D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E06C62ACFB9FF3E16DD40291 /* Pods-deviget.debug.xcconfig */,
+				89E9B8EA3853BF4428CB9DF2 /* Pods-deviget.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 479D34FF2218322100B0017B /* Build configuration list for PBXNativeTarget "deviget" */;
 			buildPhases = (
+				641953471E1CF260048E0259 /* [CP] Check Pods Manifest.lock */,
 				479D34E72218321E00B0017B /* Sources */,
 				479D34E82218321E00B0017B /* Frameworks */,
 				479D34E92218321E00B0017B /* Resources */,
+				7D316F12D7833B441B765CBF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +158,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		641953471E1CF260048E0259 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-deviget-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D316F12D7833B441B765CBF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-deviget/Pods-deviget-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-deviget/Pods-deviget-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		479D34E72218321E00B0017B /* Sources */ = {
@@ -284,6 +357,7 @@
 		};
 		479D35002218322100B0017B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E06C62ACFB9FF3E16DD40291 /* Pods-deviget.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -301,6 +375,7 @@
 		};
 		479D35012218322100B0017B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89E9B8EA3853BF4428CB9DF2 /* Pods-deviget.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
