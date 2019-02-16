@@ -15,4 +15,28 @@ class Util {
         return endpoint.replacingOccurrences(of: keyAfter, with: after)
     }
     
+    //MARK:- FileManager
+    class func write(data:Data?, withName name:String?) {
+        guard let data = data, let name = name else { return }
+        if let pathCache = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first {
+            let url = URL(fileURLWithPath: pathCache).appendingPathComponent(name)
+            do {
+                try data.write(to: url)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    class func readData(withName name:String?) -> Data? {
+        guard let name = name else { return nil }
+        if let pathCache = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first {
+            let url = URL(fileURLWithPath: pathCache).appendingPathComponent(name)
+            if let data = try? Data(contentsOf: url) {
+                return data
+            }
+        }
+        return nil
+    }
+    
 }

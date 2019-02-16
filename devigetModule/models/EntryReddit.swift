@@ -17,4 +17,5 @@ public struct EntryReddit:Decodable{
     public let created_utc:TimeInterval
     public let url:String?
     public let author_fullname:String?
+    public let id:String?
 }

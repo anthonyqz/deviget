@@ -24,7 +24,7 @@ class PostCell: UITableViewCell {
     //MARK:- internal func
     func configureCell(post:EntryReddit) {
         configureReadView(post.read)
-        configureImage(url: post.thumbnail)
+        configureImage(url: post.thumbnail, name: post.id)
         
         titlePost.text = post.title
         authorLabel.text = post.author_fullname
@@ -44,8 +44,14 @@ class PostCell: UITableViewCell {
         readView.layer.masksToBounds = true
     }
     
-    private func configureImage(url:String?) {
+    private func configureImage(url:String?, name:String?) {
         imagePost.layer.cornerRadius = imagePost.bounds.width / 2
         imagePost.layer.masksToBounds = true
+        imagePost.image = nil
+        DataManager.shared.downloadImage(from: url
+            , name: name
+            , completion: { [weak self] (image) in
+                self?.imagePost.image = image
+        })
     }
 }

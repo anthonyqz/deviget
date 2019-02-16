@@ -33,4 +33,35 @@ class DataManager: DataSourceDelegate {
         dataTask.resume()
     }
     
+    func downloadImage(from url:String?, name:String?, completion:@escaping (UIImage?)->()) {
+        guard let url = url
+            , url.count > 0
+            , let urlCreated = URL(string: url) else {
+            completion(nil)
+            return
+        }
+        
+        //verify if the image is saved
+        if let data = Util.readData(withName: name)
+            , let image = UIImage(data: data) {
+            completion(image)
+            return
+        }
+        
+        //download image
+        let dataTask = URLSession.shared.dataTask(with: urlCreated) { (data, response, error) in
+            DispatchQueue.main.async {
+                if let data = data
+                    , let image = UIImage(data: data) {
+                    completion(image)
+                    //save image
+                    Util.write(data: data, withName: name)
+                } else {
+                    completion(nil)
+                }
+            }
+        }
+        dataTask.resume()
+    }
+    
 }
