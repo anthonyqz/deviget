@@ -17,6 +17,7 @@ class RedditResponseTest:XCTestCase {
                 let response = try JSONDecoder().decode(RedditResponse.self, from: data)
                 XCTAssertNotNil(response)
                 XCTAssertTrue(response.data?.children?.count ?? 0 > 0)
+                XCTAssertNotNil(response.data?.children?.first?.data?.author_fullname)
             } catch {
                 XCTAssertNil(error, error.localizedDescription)
             }

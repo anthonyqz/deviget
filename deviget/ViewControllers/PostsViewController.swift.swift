@@ -32,6 +32,20 @@ class PostsViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     }
     
+    // MARK: - IBAction
+    @IBAction private func refreshView(_ sender: UIRefreshControl) {
+        posts = []
+        tableView.reloadData()
+        refreshControl?.endRefreshing()
+        loadPosts(with: nil)
+    }
+    
+    // MARK: - private func
+    private func loadPosts(with after:String?) {
+        PostsConfigurator.setNewURL(Util.createPostsUrl(after: after))
+        isLoadingPosts = true
+        presenter?.loadPosts()
+    }
 }
 
 //MARK:- Table View
@@ -71,9 +85,7 @@ extension PostsViewController {
             indexPath.row >= total ? true : false
         }
         if contain {
-            PostsConfigurator.setNewURL(Util.createPostsUrl(after: afterPostString))
-            isLoadingPosts = true
-            presenter?.loadPosts()
+            loadPosts(with: afterPostString)
         }
     }
 }
