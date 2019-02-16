@@ -23,6 +23,8 @@ class PostsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
+        tableView.estimatedRowHeight = 45
+        tableView.rowHeight = UITableView.automaticDimension
         PostsConfigurator.configure(view: self)//create MVP
         isLoadingPosts = true
         presenter?.loadPosts()
@@ -70,9 +72,9 @@ extension PostsViewController {
             return cell
         }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let post = posts[row]
-        cell.textLabel?.text = post.title
+        let cell = tableView.dequeueReusableCell(withIdentifier: PostCell.identifierView, for: indexPath) as! PostCell
+        cell.configureCell(post: post)
         return cell
     }
     

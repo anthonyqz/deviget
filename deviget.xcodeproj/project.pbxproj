@@ -35,6 +35,7 @@
 		479D35652218657300B0017B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D35642218657300B0017B /* DataManager.swift */; };
 		479D358C22186C0E00B0017B /* PostsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D358B22186C0E00B0017B /* PostsConfigurator.swift */; };
 		479D358E22186D1200B0017B /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D358D22186D1200B0017B /* Util.swift */; };
+		479D359122187AAE00B0017B /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D359022187AAE00B0017B /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		479D35642218657300B0017B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		479D358B22186C0E00B0017B /* PostsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsConfigurator.swift; sourceTree = "<group>"; };
 		479D358D22186D1200B0017B /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		479D359022187AAE00B0017B /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,11 +241,20 @@
 		479D356622186A2500B0017B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				479D358F22187A9100B0017B /* cells */,
 				479D35102218379B00B0017B /* PostsViewController.swift.swift */,
 				479D35122218379B00B0017B /* PostDetailViewController.swift */,
 				479D358B22186C0E00B0017B /* PostsConfigurator.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		479D358F22187A9100B0017B /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				479D359022187AAE00B0017B /* PostCell.swift */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,6 +408,7 @@
 				479D358E22186D1200B0017B /* Util.swift in Sources */,
 				479D350F2218379B00B0017B /* AppDelegate.swift in Sources */,
 				479D353822184B3A00B0017B /* Constants.swift in Sources */,
+				479D359122187AAE00B0017B /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
