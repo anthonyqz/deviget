@@ -25,10 +25,24 @@
 		479D3543221855BC00B0017B /* PostsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D3542221855BC00B0017B /* PostsRepository.swift */; };
 		479D3545221855C800B0017B /* PostsRepositoryRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D3544221855C800B0017B /* PostsRepositoryRemote.swift */; };
 		479D3548221859C200B0017B /* PostsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D3547221859C200B0017B /* PostsPresenter.swift */; };
+		479D355022185DFE00B0017B /* devigetModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D354F22185DFE00B0017B /* devigetModuleTests.swift */; };
+		479D355222185DFE00B0017B /* devigetModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479D35272218381300B0017B /* devigetModule.framework */; };
+		479D355A22185E3B00B0017B /* entries_success_ok.json in Resources */ = {isa = PBXBuildFile; fileRef = 479D355922185E3B00B0017B /* entries_success_ok.json */; };
+		479D355C22185E7E00B0017B /* FakeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D355B22185E7E00B0017B /* FakeDataManager.swift */; };
+		479D355E22185EFD00B0017B /* PostsViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D355D22185EFD00B0017B /* PostsViewSpy.swift */; };
+		479D356022185FAD00B0017B /* PostsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D355F22185FAD00B0017B /* PostsPresenterTests.swift */; };
+		479D3562221861D100B0017B /* RedditResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D3561221861D100B0017B /* RedditResponseTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		479D352C2218381300B0017B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 479D35032218379A00B0017B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 479D35262218381300B0017B;
+			remoteInfo = devigetModule;
+		};
+		479D355322185DFE00B0017B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 479D35032218379A00B0017B /* Project object */;
 			proxyType = 1;
@@ -72,6 +86,14 @@
 		479D3542221855BC00B0017B /* PostsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRepository.swift; sourceTree = "<group>"; };
 		479D3544221855C800B0017B /* PostsRepositoryRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRepositoryRemote.swift; sourceTree = "<group>"; };
 		479D3547221859C200B0017B /* PostsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsPresenter.swift; sourceTree = "<group>"; };
+		479D354D22185DFE00B0017B /* devigetModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = devigetModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		479D354F22185DFE00B0017B /* devigetModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = devigetModuleTests.swift; sourceTree = "<group>"; };
+		479D355122185DFE00B0017B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		479D355922185E3B00B0017B /* entries_success_ok.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = entries_success_ok.json; sourceTree = "<group>"; };
+		479D355B22185E7E00B0017B /* FakeDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDataManager.swift; sourceTree = "<group>"; };
+		479D355D22185EFD00B0017B /* PostsViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewSpy.swift; sourceTree = "<group>"; };
+		479D355F22185FAD00B0017B /* PostsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsPresenterTests.swift; sourceTree = "<group>"; };
+		479D3561221861D100B0017B /* RedditResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditResponseTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +112,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		479D354A22185DFE00B0017B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				479D355222185DFE00B0017B /* devigetModule.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -98,6 +128,7 @@
 			children = (
 				479D350D2218379B00B0017B /* deviget */,
 				479D35282218381300B0017B /* devigetModule */,
+				479D354E22185DFE00B0017B /* devigetModuleTests */,
 				479D350C2218379B00B0017B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,6 +138,7 @@
 			children = (
 				479D350B2218379B00B0017B /* deviget.app */,
 				479D35272218381300B0017B /* devigetModule.framework */,
+				479D354D22185DFE00B0017B /* devigetModuleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,6 +199,28 @@
 			path = presenter;
 			sourceTree = "<group>";
 		};
+		479D354E22185DFE00B0017B /* devigetModuleTests */ = {
+			isa = PBXGroup;
+			children = (
+				479D3561221861D100B0017B /* RedditResponseTest.swift */,
+				479D355F22185FAD00B0017B /* PostsPresenterTests.swift */,
+				479D355822185E1600B0017B /* jsons */,
+				479D354F22185DFE00B0017B /* devigetModuleTests.swift */,
+				479D355B22185E7E00B0017B /* FakeDataManager.swift */,
+				479D355D22185EFD00B0017B /* PostsViewSpy.swift */,
+				479D355122185DFE00B0017B /* Info.plist */,
+			);
+			path = devigetModuleTests;
+			sourceTree = "<group>";
+		};
+		479D355822185E1600B0017B /* jsons */ = {
+			isa = PBXGroup;
+			children = (
+				479D355922185E3B00B0017B /* entries_success_ok.json */,
+			);
+			path = jsons;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -218,6 +272,24 @@
 			productReference = 479D35272218381300B0017B /* devigetModule.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		479D354C22185DFE00B0017B /* devigetModuleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 479D355522185DFE00B0017B /* Build configuration list for PBXNativeTarget "devigetModuleTests" */;
+			buildPhases = (
+				479D354922185DFE00B0017B /* Sources */,
+				479D354A22185DFE00B0017B /* Frameworks */,
+				479D354B22185DFE00B0017B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				479D355422185DFE00B0017B /* PBXTargetDependency */,
+			);
+			name = devigetModuleTests;
+			productName = devigetModuleTests;
+			productReference = 479D354D22185DFE00B0017B /* devigetModuleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -234,6 +306,9 @@
 					479D35262218381300B0017B = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
+					};
+					479D354C22185DFE00B0017B = {
+						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
@@ -252,6 +327,7 @@
 			targets = (
 				479D350A2218379B00B0017B /* deviget */,
 				479D35262218381300B0017B /* devigetModule */,
+				479D354C22185DFE00B0017B /* devigetModuleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -271,6 +347,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		479D354B22185DFE00B0017B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				479D355A22185E3B00B0017B /* entries_success_ok.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +387,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		479D354922185DFE00B0017B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				479D3562221861D100B0017B /* RedditResponseTest.swift in Sources */,
+				479D356022185FAD00B0017B /* PostsPresenterTests.swift in Sources */,
+				479D355E22185EFD00B0017B /* PostsViewSpy.swift in Sources */,
+				479D355C22185E7E00B0017B /* FakeDataManager.swift in Sources */,
+				479D355022185DFE00B0017B /* devigetModuleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -310,6 +406,11 @@
 			isa = PBXTargetDependency;
 			target = 479D35262218381300B0017B /* devigetModule */;
 			targetProxy = 479D352C2218381300B0017B /* PBXContainerItemProxy */;
+		};
+		479D355422185DFE00B0017B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 479D35262218381300B0017B /* devigetModule */;
+			targetProxy = 479D355322185DFE00B0017B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -542,6 +643,40 @@
 			};
 			name = Release;
 		};
+		479D355622185DFE00B0017B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = devigetModuleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pro.christianquicano.devigetModuleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		479D355722185DFE00B0017B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = devigetModuleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pro.christianquicano.devigetModuleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -568,6 +703,15 @@
 			buildConfigurations = (
 				479D35302218381300B0017B /* Debug */,
 				479D35312218381300B0017B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		479D355522185DFE00B0017B /* Build configuration list for PBXNativeTarget "devigetModuleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				479D355622185DFE00B0017B /* Debug */,
+				479D355722185DFE00B0017B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

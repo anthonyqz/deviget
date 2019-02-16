@@ -9,7 +9,7 @@
 import Foundation
 
 public struct EntryReddit:Decodable{
-    public var read = false
+    public var read:Bool?
     public let subreddit:String?
     public let thumbnail:String?
     public let title:String?
