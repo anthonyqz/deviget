@@ -17,6 +17,7 @@ class PostsViewController: UITableViewController {
     private let sectionPosts    = 0
     private let sectionLoadMore = 1
     private var isLoadingPosts = false
+    private var hideLoadingMore = false
     weak private var presenter:PostsPresenterDelegate?
 
     //MARK:- UIViewController
@@ -42,10 +43,25 @@ class PostsViewController: UITableViewController {
         loadPosts(with: nil)
     }
     
+    @IBAction private func dismissAll(_ sender: UIBarButtonItem) {
+        //creating indexpaths
+        var indexPaths = [IndexPath]()
+        for row in 0..<posts.count {
+            indexPaths.append(IndexPath(row: row, section: sectionPosts))
+        }
+        posts = []
+        tableView.beginUpdates()
+        tableView.deleteRows(at: indexPaths, with: .automatic)
+        tableView.endUpdates()
+        hideLoadingMore = true
+        tableView.reloadData()
+    }
+    
     // MARK: - private func
     private func loadPosts(with after:String?) {
         PostsConfigurator.setNewURL(Util.createPostsUrl(after: after))
         isLoadingPosts = true
+        hideLoadingMore = false
         presenter?.loadPosts()
     }
 }
@@ -54,7 +70,7 @@ class PostsViewController: UITableViewController {
 extension PostsViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return hideLoadingMore ? 1 : 2
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
