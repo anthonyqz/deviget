@@ -33,6 +33,8 @@
 		479D356022185FAD00B0017B /* PostsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D355F22185FAD00B0017B /* PostsPresenterTests.swift */; };
 		479D3562221861D100B0017B /* RedditResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D3561221861D100B0017B /* RedditResponseTest.swift */; };
 		479D35652218657300B0017B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D35642218657300B0017B /* DataManager.swift */; };
+		479D358C22186C0E00B0017B /* PostsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D358B22186C0E00B0017B /* PostsConfigurator.swift */; };
+		479D358E22186D1200B0017B /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D358D22186D1200B0017B /* Util.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,8 @@
 		479D355F22185FAD00B0017B /* PostsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsPresenterTests.swift; sourceTree = "<group>"; };
 		479D3561221861D100B0017B /* RedditResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditResponseTest.swift; sourceTree = "<group>"; };
 		479D35642218657300B0017B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		479D358B22186C0E00B0017B /* PostsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsConfigurator.swift; sourceTree = "<group>"; };
+		479D358D22186D1200B0017B /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +231,7 @@
 			children = (
 				479D353722184B3A00B0017B /* Constants.swift */,
 				479D35642218657300B0017B /* DataManager.swift */,
+				479D358D22186D1200B0017B /* Util.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 			children = (
 				479D35102218379B00B0017B /* PostsViewController.swift.swift */,
 				479D35122218379B00B0017B /* PostDetailViewController.swift */,
+				479D358B22186C0E00B0017B /* PostsConfigurator.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -384,9 +390,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				479D358C22186C0E00B0017B /* PostsConfigurator.swift in Sources */,
 				479D35132218379B00B0017B /* PostDetailViewController.swift in Sources */,
 				479D35652218657300B0017B /* DataManager.swift in Sources */,
 				479D35112218379B00B0017B /* PostsViewController.swift.swift in Sources */,
+				479D358E22186D1200B0017B /* Util.swift in Sources */,
 				479D350F2218379B00B0017B /* AppDelegate.swift in Sources */,
 				479D353822184B3A00B0017B /* Constants.swift in Sources */,
 			);

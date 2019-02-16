@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PostsPresenter {
+public class PostsPresenter {
     
     //MARK:- static properties
     static private var shared:PostsPresenter?
@@ -55,11 +55,11 @@ class PostsPresenter {
 //MARK:- PostsPresenterDelegate
 extension PostsPresenter:PostsPresenterDelegate {
     
-    static func destroyInstance() {
+    public static func destroyInstance() {
         shared = nil
     }
     
-    func loadPosts() {
+    public func loadPosts() {
         repository?.fetchData(for: RedditResponse.self
             , success: { [weak self] (reddit) in
                 self?.handleResponse(reddit)

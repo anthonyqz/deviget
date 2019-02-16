@@ -95,13 +95,6 @@ public protocol PostsRemoteDataSource : class {
      */
     func setDataManager(_ dataManager: DataSourceDelegate?)
     
-    /**
-     Generic func to update url
-     
-     - Parameters:
-     - url: url of posts
-     */
-    func updateUrl(_ url: String?)
 }
 
 
@@ -121,4 +114,22 @@ public protocol DataSourceDelegate:class {
     func requestJson(url:String
         , success:@escaping (Data?)->()
         , failure:@escaping (Error?)->())
+}
+
+
+/**
+ Posts protocols
+ */
+public protocol PostsConfiguratorDelegate:class {
+    
+    /**
+     configure view restaurant
+     - Parameters:
+     - view: restaurant view
+     */
+    static func configure(view: PostsViewDelegate?)
+    
+    static func setNewURL(_ url: String?)
+    
+    static func cleanAllSingletons()
 }

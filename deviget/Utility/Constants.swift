@@ -8,6 +8,5 @@
 
 import Foundation
 
-let keyLimit = "$KEY_LIMIT$"
 let keyAfter = "$KEY_AFTER$"
-let endpoint = "https://www.reddit.com/top.json?limit=\(keyLimit)&after=\(keyAfter)"
+let endpoint = "https://www.reddit.com/top.json?limit=50&after=\(keyAfter)"

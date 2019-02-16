@@ -11,10 +11,16 @@ import devigetModule
 
 class PostsViewController: UITableViewController {
 
+    //MARK:- privates properties
     private var posts = [EntryReddit]()
+    private var afterPostString:String?
+    weak private var presenter:PostsPresenterDelegate?
 
+    //MARK:- UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
+        PostsConfigurator.configure(view: self)//create MVP
+        presenter?.loadPosts()
     }
 
     // MARK: - Segues
@@ -38,4 +44,24 @@ class PostsViewController: UITableViewController {
     }
 
 }
-
+// MARK: - PostsViewDelegate
+extension PostsViewController:PostsViewDelegate {
+    
+    func showEntries(_ entries: [EntryReddit]) {
+        posts.append(contentsOf: entries)
+        tableView.reloadData()
+    }
+    
+    func sendAfterPost(_ after: String?) {
+        afterPostString = after
+    }
+    
+    func setPresenter(_ presenter: PostsPresenterDelegate?) {
+        self.presenter = presenter
+    }
+    
+    func showNetworkError(_ error: Error?) {
+        
+    }
+    
+}

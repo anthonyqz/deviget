@@ -22,6 +22,13 @@ public class PostsRepositoryRemote {
         return shared
     }
     
+    public static func updateUrl(_ url: String?) {
+        guard let shared = shared
+            , let url = url
+            else { return }
+        shared.url = url
+    }
+    
     //MARK:- private properties
     private var url:String?
     private var dataManager: DataSourceDelegate?
@@ -36,11 +43,6 @@ extension PostsRepositoryRemote:PostsRemoteDataSource {
     
     public static func destroyInstance() {
         shared = nil
-    }
-    
-    public func updateUrl(_ url: String?) {
-        guard let url = url else { return }
-        self.url = url
     }
     
     public func fetchData<T>(for type: T.Type

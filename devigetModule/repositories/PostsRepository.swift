@@ -34,10 +34,6 @@ public class PostsRepository {
 //MARK:- PostsRemoteDataSource
 extension PostsRepository:PostsRemoteDataSource {
     
-    public func updateUrl(_ url: String?) {
-        remoteRepository?.updateUrl(url)
-    }
-    
     public static func destroyInstance() {
         shared = nil
     }
