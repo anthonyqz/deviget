@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		479D350F2218379B00B0017B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D350E2218379B00B0017B /* AppDelegate.swift */; };
-		479D35112218379B00B0017B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D35102218379B00B0017B /* MasterViewController.swift */; };
-		479D35132218379B00B0017B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D35122218379B00B0017B /* DetailViewController.swift */; };
+		479D35112218379B00B0017B /* PostsViewController.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D35102218379B00B0017B /* PostsViewController.swift.swift */; };
+		479D35132218379B00B0017B /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D35122218379B00B0017B /* PostDetailViewController.swift */; };
 		479D35162218379B00B0017B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 479D35142218379B00B0017B /* Main.storyboard */; };
 		479D35182218379B00B0017B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 479D35172218379B00B0017B /* Assets.xcassets */; };
 		479D351B2218379B00B0017B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 479D35192218379B00B0017B /* LaunchScreen.storyboard */; };
@@ -32,6 +32,7 @@
 		479D355E22185EFD00B0017B /* PostsViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D355D22185EFD00B0017B /* PostsViewSpy.swift */; };
 		479D356022185FAD00B0017B /* PostsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D355F22185FAD00B0017B /* PostsPresenterTests.swift */; };
 		479D3562221861D100B0017B /* RedditResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D3561221861D100B0017B /* RedditResponseTest.swift */; };
+		479D35652218657300B0017B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D35642218657300B0017B /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,8 +69,8 @@
 /* Begin PBXFileReference section */
 		479D350B2218379B00B0017B /* deviget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = deviget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		479D350E2218379B00B0017B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		479D35102218379B00B0017B /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		479D35122218379B00B0017B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		479D35102218379B00B0017B /* PostsViewController.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift.swift; sourceTree = "<group>"; };
+		479D35122218379B00B0017B /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
 		479D35152218379B00B0017B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		479D35172218379B00B0017B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		479D351A2218379B00B0017B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -94,6 +95,7 @@
 		479D355D22185EFD00B0017B /* PostsViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewSpy.swift; sourceTree = "<group>"; };
 		479D355F22185FAD00B0017B /* PostsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsPresenterTests.swift; sourceTree = "<group>"; };
 		479D3561221861D100B0017B /* RedditResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditResponseTest.swift; sourceTree = "<group>"; };
+		479D35642218657300B0017B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,11 +148,10 @@
 		479D350D2218379B00B0017B /* deviget */ = {
 			isa = PBXGroup;
 			children = (
-				479D353722184B3A00B0017B /* Constants.swift */,
 				479D350E2218379B00B0017B /* AppDelegate.swift */,
-				479D35102218379B00B0017B /* MasterViewController.swift */,
-				479D35122218379B00B0017B /* DetailViewController.swift */,
 				479D35142218379B00B0017B /* Main.storyboard */,
+				479D35632218655D00B0017B /* Utility */,
+				479D356622186A2500B0017B /* ViewControllers */,
 				479D35172218379B00B0017B /* Assets.xcassets */,
 				479D35192218379B00B0017B /* LaunchScreen.storyboard */,
 				479D351C2218379B00B0017B /* Info.plist */,
@@ -219,6 +220,24 @@
 				479D355922185E3B00B0017B /* entries_success_ok.json */,
 			);
 			path = jsons;
+			sourceTree = "<group>";
+		};
+		479D35632218655D00B0017B /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				479D353722184B3A00B0017B /* Constants.swift */,
+				479D35642218657300B0017B /* DataManager.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		479D356622186A2500B0017B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				479D35102218379B00B0017B /* PostsViewController.swift.swift */,
+				479D35122218379B00B0017B /* PostDetailViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,8 +384,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				479D35132218379B00B0017B /* DetailViewController.swift in Sources */,
-				479D35112218379B00B0017B /* MasterViewController.swift in Sources */,
+				479D35132218379B00B0017B /* PostDetailViewController.swift in Sources */,
+				479D35652218657300B0017B /* DataManager.swift in Sources */,
+				479D35112218379B00B0017B /* PostsViewController.swift.swift in Sources */,
 				479D350F2218379B00B0017B /* AppDelegate.swift in Sources */,
 				479D353822184B3A00B0017B /* Constants.swift in Sources */,
 			);
