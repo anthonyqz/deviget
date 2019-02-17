@@ -36,6 +36,20 @@
 		479D358C22186C0E00B0017B /* PostsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D358B22186C0E00B0017B /* PostsConfigurator.swift */; };
 		479D358E22186D1200B0017B /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D358D22186D1200B0017B /* Util.swift */; };
 		479D359122187AAE00B0017B /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D359022187AAE00B0017B /* PostCell.swift */; };
+		479D35B92219BB2C00B0017B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D35B82219BB2C00B0017B /* AppDelegate.swift */; };
+		479D35C82219BB7700B0017B /* devigetModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479D35272218381300B0017B /* devigetModule.framework */; };
+		479D35C92219BB7700B0017B /* devigetModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 479D35272218381300B0017B /* devigetModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		479D35CD2219BBB300B0017B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 479D35142218379B00B0017B /* Main.storyboard */; };
+		479D35CE2219BBB800B0017B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D353722184B3A00B0017B /* Constants.swift */; };
+		479D35D02219BBB800B0017B /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D358D22186D1200B0017B /* Util.swift */; };
+		479D35D12219BBBC00B0017B /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D359022187AAE00B0017B /* PostCell.swift */; };
+		479D35D22219BBC500B0017B /* PostsViewController.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D35102218379B00B0017B /* PostsViewController.swift.swift */; };
+		479D35D32219BBC500B0017B /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D35122218379B00B0017B /* PostDetailViewController.swift */; };
+		479D35D52219BBC700B0017B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 479D35172218379B00B0017B /* Assets.xcassets */; };
+		479D35D62219BBCC00B0017B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 479D35192218379B00B0017B /* LaunchScreen.storyboard */; };
+		479D35D92219BBF100B0017B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D35D82219BBEF00B0017B /* DataManager.swift */; };
+		479D35DC2219BC1700B0017B /* PostsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D35DB2219BC1400B0017B /* PostsConfigurator.swift */; };
+		479D35E02219BD8A00B0017B /* entries_success_ok.json in Resources */ = {isa = PBXBuildFile; fileRef = 479D35DF2219BD7D00B0017B /* entries_success_ok.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +67,13 @@
 			remoteGlobalIDString = 479D35262218381300B0017B;
 			remoteInfo = devigetModule;
 		};
+		479D35CA2219BB7700B0017B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 479D35032218379A00B0017B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 479D35262218381300B0017B;
+			remoteInfo = devigetModule;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,6 +84,17 @@
 			dstSubfolderSpec = 10;
 			files = (
 				479D352F2218381300B0017B /* devigetModule.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		479D35CC2219BB7700B0017B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				479D35C92219BB7700B0017B /* devigetModule.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +134,12 @@
 		479D358B22186C0E00B0017B /* PostsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsConfigurator.swift; sourceTree = "<group>"; };
 		479D358D22186D1200B0017B /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		479D359022187AAE00B0017B /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		479D35B62219BB2C00B0017B /* devigetMock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = devigetMock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		479D35B82219BB2C00B0017B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		479D35C42219BB2D00B0017B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		479D35D82219BBEF00B0017B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		479D35DB2219BC1400B0017B /* PostsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsConfigurator.swift; sourceTree = "<group>"; };
+		479D35DF2219BD7D00B0017B /* entries_success_ok.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = entries_success_ok.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +166,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		479D35B32219BB2C00B0017B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				479D35C82219BB7700B0017B /* devigetModule.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -137,6 +183,7 @@
 				479D350D2218379B00B0017B /* deviget */,
 				479D35282218381300B0017B /* devigetModule */,
 				479D354E22185DFE00B0017B /* devigetModuleTests */,
+				479D35B72219BB2C00B0017B /* devigetMock */,
 				479D350C2218379B00B0017B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -147,6 +194,7 @@
 				479D350B2218379B00B0017B /* deviget.app */,
 				479D35272218381300B0017B /* devigetModule.framework */,
 				479D354D22185DFE00B0017B /* devigetModuleTests.xctest */,
+				479D35B62219BB2C00B0017B /* devigetMock.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -257,6 +305,42 @@
 			path = cells;
 			sourceTree = "<group>";
 		};
+		479D35B72219BB2C00B0017B /* devigetMock */ = {
+			isa = PBXGroup;
+			children = (
+				479D35B82219BB2C00B0017B /* AppDelegate.swift */,
+				479D35C42219BB2D00B0017B /* Info.plist */,
+				479D35DE2219BD7D00B0017B /* jsons */,
+				479D35D72219BBE100B0017B /* Utility */,
+				479D35DA2219BBFE00B0017B /* ViewControllers */,
+			);
+			path = devigetMock;
+			sourceTree = "<group>";
+		};
+		479D35D72219BBE100B0017B /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				479D35D82219BBEF00B0017B /* DataManager.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		479D35DA2219BBFE00B0017B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				479D35DB2219BC1400B0017B /* PostsConfigurator.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		479D35DE2219BD7D00B0017B /* jsons */ = {
+			isa = PBXGroup;
+			children = (
+				479D35DF2219BD7D00B0017B /* entries_success_ok.json */,
+			);
+			path = jsons;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -326,6 +410,25 @@
 			productReference = 479D354D22185DFE00B0017B /* devigetModuleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		479D35B52219BB2C00B0017B /* devigetMock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 479D35C52219BB2D00B0017B /* Build configuration list for PBXNativeTarget "devigetMock" */;
+			buildPhases = (
+				479D35B22219BB2C00B0017B /* Sources */,
+				479D35B32219BB2C00B0017B /* Frameworks */,
+				479D35B42219BB2C00B0017B /* Resources */,
+				479D35CC2219BB7700B0017B /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				479D35CB2219BB7700B0017B /* PBXTargetDependency */,
+			);
+			name = devigetMock;
+			productName = devigetMock;
+			productReference = 479D35B62219BB2C00B0017B /* devigetMock.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -346,6 +449,9 @@
 					479D354C22185DFE00B0017B = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					479D35B52219BB2C00B0017B = {
+						CreatedOnToolsVersion = 10.1;
+					};
 				};
 			};
 			buildConfigurationList = 479D35062218379A00B0017B /* Build configuration list for PBXProject "deviget" */;
@@ -362,6 +468,7 @@
 			projectRoot = "";
 			targets = (
 				479D350A2218379B00B0017B /* deviget */,
+				479D35B52219BB2C00B0017B /* devigetMock */,
 				479D35262218381300B0017B /* devigetModule */,
 				479D354C22185DFE00B0017B /* devigetModuleTests */,
 			);
@@ -391,6 +498,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				479D355A22185E3B00B0017B /* entries_success_ok.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		479D35B42219BB2C00B0017B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				479D35D62219BBCC00B0017B /* LaunchScreen.storyboard in Resources */,
+				479D35D52219BBC700B0017B /* Assets.xcassets in Resources */,
+				479D35E02219BD8A00B0017B /* entries_success_ok.json in Resources */,
+				479D35CD2219BBB300B0017B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +557,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		479D35B22219BB2C00B0017B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				479D35B92219BB2C00B0017B /* AppDelegate.swift in Sources */,
+				479D35D32219BBC500B0017B /* PostDetailViewController.swift in Sources */,
+				479D35CE2219BBB800B0017B /* Constants.swift in Sources */,
+				479D35D02219BBB800B0017B /* Util.swift in Sources */,
+				479D35D92219BBF100B0017B /* DataManager.swift in Sources */,
+				479D35D12219BBBC00B0017B /* PostCell.swift in Sources */,
+				479D35DC2219BC1700B0017B /* PostsConfigurator.swift in Sources */,
+				479D35D22219BBC500B0017B /* PostsViewController.swift.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -451,6 +584,11 @@
 			isa = PBXTargetDependency;
 			target = 479D35262218381300B0017B /* devigetModule */;
 			targetProxy = 479D355322185DFE00B0017B /* PBXContainerItemProxy */;
+		};
+		479D35CB2219BB7700B0017B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 479D35262218381300B0017B /* devigetModule */;
+			targetProxy = 479D35CA2219BB7700B0017B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -717,6 +855,42 @@
 			};
 			name = Release;
 		};
+		479D35C62219BB2D00B0017B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = devigetMock/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pro.christianquicano.devigetMock;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		479D35C72219BB2D00B0017B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = devigetMock/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pro.christianquicano.devigetMock;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -752,6 +926,15 @@
 			buildConfigurations = (
 				479D355622185DFE00B0017B /* Debug */,
 				479D355722185DFE00B0017B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		479D35C52219BB2D00B0017B /* Build configuration list for PBXNativeTarget "devigetMock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				479D35C62219BB2D00B0017B /* Debug */,
+				479D35C72219BB2D00B0017B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
