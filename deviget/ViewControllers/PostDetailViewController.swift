@@ -36,6 +36,10 @@ class PostDetailViewController: UIViewController {
         guard let image = imagePost.image else { return }
         let activityController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         present(activityController, animated: true, completion: nil)
+        if let popOver = activityController.popoverPresentationController {
+            popOver.sourceView = self.view
+            popOver.sourceRect = imagePost.frame
+        }
     }
     
 
