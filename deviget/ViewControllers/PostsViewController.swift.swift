@@ -19,6 +19,7 @@ class PostsViewController: UITableViewController {
     private var isLoadingPosts = false
     private var hideLoadingMore = false
     weak private var presenter:PostsPresenterDelegate?
+    private var indexPathSelected:IndexPath?
 
     //MARK:- UIViewController
     override func viewDidLoad() {
@@ -33,6 +34,15 @@ class PostsViewController: UITableViewController {
 
     // MARK: - Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail" {
+            if let row = tableView.indexPathForSelectedRow?.row {
+                let controller = (segue.destination as! UINavigationController).topViewController as! PostDetailViewController
+                let post = posts[row]
+                controller.post = post
+                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+                controller.navigationItem.leftItemsSupplementBackButton = true
+            }
+        }
     }
     
     // MARK: - IBAction
@@ -92,6 +102,14 @@ extension PostsViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: PostCell.identifierView, for: indexPath) as! PostCell
         cell.configureCell(post: post, delegate: self)
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = indexPath.row
+        posts[row].read = true
+        tableView.beginUpdates()
+        tableView.reloadRows(at: [indexPath], with: .none)
+        tableView.endUpdates()
     }
     
     override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {

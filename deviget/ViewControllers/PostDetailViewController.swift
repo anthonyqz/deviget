@@ -11,16 +11,21 @@ import devigetModule
 
 class PostDetailViewController: UIViewController {
 
-    var post:EntryReddit? {
-        didSet {
-            self.detailDescriptionLabel.text = post?.title
-        }
-    }
+    //MARK:- internal properties
+    var post:EntryReddit?
     
-    @IBOutlet private weak var detailDescriptionLabel: UILabel!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    //MARK:- IBOutlet properties
+    @IBOutlet private weak var detailDescriptionLabel: UITextView!
+    @IBOutlet private weak var imagePost: UIImageView!
+    
+    //MARK:- UIViewController
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        detailDescriptionLabel.text = post?.title
+        DataManager.shared.downloadImage(from: post?.thumbnail, name: post?.id) { [weak self] (image) in
+            self?.imagePost.image = image
+        }
     }
 
 }
