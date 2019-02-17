@@ -31,8 +31,16 @@ class devigetMockUITests: XCTestCase {
         
         let authorPost = "t2_eg0d02d"
         let dimissButtonTitle = "Dismiss Post"
+        let navigationBar = "Post Detail"
         
         let app = XCUIApplication()
+        
+        //for ipad
+        let barButton = app.navigationBars[navigationBar].buttons[" "]
+        if barButton.exists {
+            barButton.tap()
+        }
+        
         let tablesQuery = app.tables
         let cell = tablesQuery.cells.containing(.staticText, identifier: authorPost)
         let titleAuthor = cell.staticTexts[authorPost]
