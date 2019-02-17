@@ -50,6 +50,7 @@
 		479D35D92219BBF100B0017B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D35D82219BBEF00B0017B /* DataManager.swift */; };
 		479D35DC2219BC1700B0017B /* PostsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D35DB2219BC1400B0017B /* PostsConfigurator.swift */; };
 		479D35E02219BD8A00B0017B /* entries_success_ok.json in Resources */ = {isa = PBXBuildFile; fileRef = 479D35DF2219BD7D00B0017B /* entries_success_ok.json */; };
+		479D35E82219BDD900B0017B /* devigetMockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479D35E72219BDD900B0017B /* devigetMockUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 479D35262218381300B0017B;
 			remoteInfo = devigetModule;
+		};
+		479D35EA2219BDD900B0017B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 479D35032218379A00B0017B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 479D35B52219BB2C00B0017B;
+			remoteInfo = devigetMock;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -140,6 +148,9 @@
 		479D35D82219BBEF00B0017B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		479D35DB2219BC1400B0017B /* PostsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsConfigurator.swift; sourceTree = "<group>"; };
 		479D35DF2219BD7D00B0017B /* entries_success_ok.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = entries_success_ok.json; sourceTree = "<group>"; };
+		479D35E52219BDD900B0017B /* devigetMockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = devigetMockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		479D35E72219BDD900B0017B /* devigetMockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = devigetMockUITests.swift; sourceTree = "<group>"; };
+		479D35E92219BDD900B0017B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +185,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		479D35E22219BDD900B0017B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -184,6 +202,7 @@
 				479D35282218381300B0017B /* devigetModule */,
 				479D354E22185DFE00B0017B /* devigetModuleTests */,
 				479D35B72219BB2C00B0017B /* devigetMock */,
+				479D35E62219BDD900B0017B /* devigetMockUITests */,
 				479D350C2218379B00B0017B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -195,6 +214,7 @@
 				479D35272218381300B0017B /* devigetModule.framework */,
 				479D354D22185DFE00B0017B /* devigetModuleTests.xctest */,
 				479D35B62219BB2C00B0017B /* devigetMock.app */,
+				479D35E52219BDD900B0017B /* devigetMockUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -341,6 +361,15 @@
 			path = jsons;
 			sourceTree = "<group>";
 		};
+		479D35E62219BDD900B0017B /* devigetMockUITests */ = {
+			isa = PBXGroup;
+			children = (
+				479D35E72219BDD900B0017B /* devigetMockUITests.swift */,
+				479D35E92219BDD900B0017B /* Info.plist */,
+			);
+			path = devigetMockUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -429,6 +458,24 @@
 			productReference = 479D35B62219BB2C00B0017B /* devigetMock.app */;
 			productType = "com.apple.product-type.application";
 		};
+		479D35E42219BDD900B0017B /* devigetMockUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 479D35EC2219BDD900B0017B /* Build configuration list for PBXNativeTarget "devigetMockUITests" */;
+			buildPhases = (
+				479D35E12219BDD900B0017B /* Sources */,
+				479D35E22219BDD900B0017B /* Frameworks */,
+				479D35E32219BDD900B0017B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				479D35EB2219BDD900B0017B /* PBXTargetDependency */,
+			);
+			name = devigetMockUITests;
+			productName = devigetMockUITests;
+			productReference = 479D35E52219BDD900B0017B /* devigetMockUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -452,6 +499,10 @@
 					479D35B52219BB2C00B0017B = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					479D35E42219BDD900B0017B = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 479D35B52219BB2C00B0017B;
+					};
 				};
 			};
 			buildConfigurationList = 479D35062218379A00B0017B /* Build configuration list for PBXProject "deviget" */;
@@ -471,6 +522,7 @@
 				479D35B52219BB2C00B0017B /* devigetMock */,
 				479D35262218381300B0017B /* devigetModule */,
 				479D354C22185DFE00B0017B /* devigetModuleTests */,
+				479D35E42219BDD900B0017B /* devigetMockUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -509,6 +561,13 @@
 				479D35D52219BBC700B0017B /* Assets.xcassets in Resources */,
 				479D35E02219BD8A00B0017B /* entries_success_ok.json in Resources */,
 				479D35CD2219BBB300B0017B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		479D35E32219BDD900B0017B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,6 +631,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		479D35E12219BDD900B0017B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				479D35E82219BDD900B0017B /* devigetMockUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -589,6 +656,11 @@
 			isa = PBXTargetDependency;
 			target = 479D35262218381300B0017B /* devigetModule */;
 			targetProxy = 479D35CA2219BB7700B0017B /* PBXContainerItemProxy */;
+		};
+		479D35EB2219BDD900B0017B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 479D35B52219BB2C00B0017B /* devigetMock */;
+			targetProxy = 479D35EA2219BDD900B0017B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -891,6 +963,42 @@
 			};
 			name = Release;
 		};
+		479D35ED2219BDD900B0017B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = devigetMockUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pro.christianquicano.devigetMockUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = devigetMock;
+			};
+			name = Debug;
+		};
+		479D35EE2219BDD900B0017B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = devigetMockUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pro.christianquicano.devigetMockUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = devigetMock;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -935,6 +1043,15 @@
 			buildConfigurations = (
 				479D35C62219BB2D00B0017B /* Debug */,
 				479D35C72219BB2D00B0017B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		479D35EC2219BDD900B0017B /* Build configuration list for PBXNativeTarget "devigetMockUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				479D35ED2219BDD900B0017B /* Debug */,
+				479D35EE2219BDD900B0017B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
