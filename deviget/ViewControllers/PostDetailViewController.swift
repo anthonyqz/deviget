@@ -26,7 +26,7 @@ class PostDetailViewController: UIViewController {
     
     //MARK:- Private
     private func populateView() {
-        detailDescriptionLabel.text = post?.title
+        detailDescriptionLabel.text = post?.title ?? "Select an item from the list"
         DataManager.shared.downloadImage(from: post?.thumbnail, name: post?.id) { [weak self] (image) in
             self?.imagePost.image = image
         }
