@@ -151,6 +151,7 @@
 		479D35E52219BDD900B0017B /* devigetMockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = devigetMockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		479D35E72219BDD900B0017B /* devigetMockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = devigetMockUITests.swift; sourceTree = "<group>"; };
 		479D35E92219BDD900B0017B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		479D35EF2219C4A800B0017B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +199,7 @@
 		479D35022218379A00B0017B = {
 			isa = PBXGroup;
 			children = (
+				479D35EF2219C4A800B0017B /* README.md */,
 				479D350D2218379B00B0017B /* deviget */,
 				479D35282218381300B0017B /* devigetModule */,
 				479D354E22185DFE00B0017B /* devigetModuleTests */,
