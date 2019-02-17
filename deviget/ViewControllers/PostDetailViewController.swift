@@ -27,6 +27,13 @@ class PostDetailViewController: UIViewController {
             self?.imagePost.image = image
         }
     }
+    
+    @IBAction func sendImage() {
+        guard let image = imagePost.image else { return }
+        let activityController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        present(activityController, animated: true, completion: nil)
+    }
+    
 
 }
 

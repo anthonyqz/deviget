@@ -34,30 +34,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1fR-On-lhU">
-                                <rect key="frame" x="16" y="20" width="340" height="181"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="181" id="gVq-jR-mSq"/>
-                                </constraints>
-                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNZ-ZB-5hE">
-                                <rect key="frame" x="16" y="219" width="340" height="364"/>
+                                <rect key="frame" x="10" y="219" width="355" height="364"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v9y-wS-mcv">
+                                <rect key="frame" x="10" y="20" width="355" height="191"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqj-KW-Hh4">
+                                <rect key="frame" x="10" y="20" width="355" height="191"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="191" id="sNY-qg-Cpx"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sendImage" destination="JEX-9P-axG" eventType="touchUpInside" id="6Ld-ek-Sde"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="LNZ-ZB-5hE" firstAttribute="top" secondItem="1fR-On-lhU" secondAttribute="bottom" constant="18" id="Bfs-OV-18f"/>
-                            <constraint firstItem="LNZ-ZB-5hE" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" constant="16" id="HWQ-3P-ZhF"/>
-                            <constraint firstItem="1fR-On-lhU" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" constant="16" id="Mfu-2q-5Rd"/>
-                            <constraint firstItem="VUw-jc-0yf" firstAttribute="bottom" secondItem="LNZ-ZB-5hE" secondAttribute="bottom" constant="20" id="SQs-xn-4Nh"/>
-                            <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="1fR-On-lhU" secondAttribute="trailing" constant="19" id="fKh-xW-9bb"/>
-                            <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="LNZ-ZB-5hE" secondAttribute="trailing" constant="19" id="jaE-Ab-DSU"/>
-                            <constraint firstItem="1fR-On-lhU" firstAttribute="top" secondItem="VUw-jc-0yf" secondAttribute="top" constant="20" id="z63-hS-gn9"/>
+                            <constraint firstItem="v9y-wS-mcv" firstAttribute="height" secondItem="dqj-KW-Hh4" secondAttribute="height" id="0IA-sP-wUd"/>
+                            <constraint firstItem="VUw-jc-0yf" firstAttribute="bottom" secondItem="LNZ-ZB-5hE" secondAttribute="bottom" constant="20" id="5Jd-dM-Ana"/>
+                            <constraint firstItem="LNZ-ZB-5hE" firstAttribute="top" secondItem="dqj-KW-Hh4" secondAttribute="bottom" constant="8" id="80U-8V-VA8"/>
+                            <constraint firstItem="LNZ-ZB-5hE" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" constant="10" id="DPf-ka-l3w"/>
+                            <constraint firstItem="v9y-wS-mcv" firstAttribute="top" secondItem="dqj-KW-Hh4" secondAttribute="top" id="Nvu-fB-wH4"/>
+                            <constraint firstItem="dqj-KW-Hh4" firstAttribute="top" secondItem="VUw-jc-0yf" secondAttribute="top" constant="20" id="QlI-he-fAb"/>
+                            <constraint firstItem="v9y-wS-mcv" firstAttribute="leading" secondItem="dqj-KW-Hh4" secondAttribute="leading" id="ZO2-Ut-6WG"/>
+                            <constraint firstItem="dqj-KW-Hh4" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" constant="10" id="aE1-LG-ebq"/>
+                            <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="dqj-KW-Hh4" secondAttribute="trailing" constant="10" id="dez-kh-zgR"/>
+                            <constraint firstItem="v9y-wS-mcv" firstAttribute="width" secondItem="dqj-KW-Hh4" secondAttribute="width" id="qcQ-DE-9z3"/>
+                            <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="LNZ-ZB-5hE" secondAttribute="trailing" constant="10" id="rAu-z1-MS5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VUw-jc-0yf"/>
                     </view>
@@ -67,7 +76,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="detailDescriptionLabel" destination="LNZ-ZB-5hE" id="d5E-EZ-4aV"/>
-                        <outlet property="imagePost" destination="1fR-On-lhU" id="img-8P-ahu"/>
+                        <outlet property="imagePost" destination="v9y-wS-mcv" id="lF5-bE-WwK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
